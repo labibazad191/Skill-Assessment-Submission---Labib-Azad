@@ -3,11 +3,7 @@
     <mat-form-field appearance="fill" class="full">
       <mat-label>Student Event at Southeast University</mat-label>
       <input matInput formControlName="title" />
-      <mat-error *ngIf="form.get('title')?.hasError('required')">Required</mat-error>
-      <mat-error *ngIf="form.get('title')?.hasError('minlength')">Min 5 chars</mat-error>
-      <mat-error *ngIf="form.get('title')?.hasError('titleTaken')">Title already exists</mat-error>
-      <mat-error *ngIf="form.get('title')?.hasError('trim')">No leading/trailing spaces</mat-error>
-    </mat-form-field>
+      
 
     <mat-form-field appearance="fill" class="full">
       <mat-label>Description (optional)</mat-label>
