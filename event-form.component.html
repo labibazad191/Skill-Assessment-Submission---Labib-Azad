@@ -1,7 +1,7 @@
 <mat-card>
   <form [formGroup]="form" (ngSubmit)="submit()">
     <mat-form-field appearance="fill" class="full">
-      <mat-label>Title</mat-label>
+      <mat-label>Student Event at Southeast University</mat-label>
       <input matInput formControlName="title" />
       <mat-error *ngIf="form.get('title')?.hasError('required')">Required</mat-error>
       <mat-error *ngIf="form.get('title')?.hasError('minlength')">Min 5 chars</mat-error>
