@@ -1,0 +1,29 @@
+<mat-card>
+  <mat-form-field class="full">
+    <mat-label>Search</mat-label>
+    <input matInput [formControl]="search" placeholder="Search by title or description" />
+  </mat-form-field>
+
+  <div class="table-headers">
+    <button mat-button (click)="toggleSort('title')">Id</button>
+    <button mat-button (click)="toggleSort('category')">Category</button>
+    <button mat-button (click)="toggleSort('status')">Status</button>
+    <button mat-button (click)="toggleSort('eventDate')">Date</button>
+  </div>
+
+  <cdk-virtual-scroll-viewport itemSize="88" class="viewport" (scrolledIndexChange)="onScroll()">
+    <div *cdkVirtualFor="let it of items" class="row item-row">
+      <div class="col title">{{ it.title }}</div>
+      <div class="col">{{ it.category }}</div>
+      <div class="col">{{ it.status }}</div>
+      <div class="col">{{ it.eventDate | date:'short' }}</div>
+      <div class="actions">
+        <button mat-icon-button [routerLink]="['/edit', it.id]"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button (click)="duplicate(it)"><mat-icon>content_copy</mat-icon></button>
+        <button mat-icon-button (click)="delete(it)"><mat-icon>delete</mat-icon></button>
+      </div>
+    </div>
+  </cdk-virtual-scroll-viewport>
+
+  <div *ngIf="loading" class="loading">Loading...</div>
+</mat-card>

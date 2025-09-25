@@ -1,0 +1,53 @@
+<mat-card>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <mat-form-field appearance="fill" class="full">
+      <mat-label>Student Event at Southeast University</mat-label>
+      <input matInput formControlName="title" />
+      
+
+    <mat-form-field appearance="fill" class="full">
+      <mat-label>Description </mat-label>
+      <textarea matInput formControlName="description" rows="5"></textarea>
+      <mat-hint align="end">{{ form.get('description')?.value?.length || 0 }}/500</mat-hint>
+    </mat-form-field>
+
+    <div class="row">
+      <mat-form-field>
+        <mat-label>Category</mat-label>
+        <mat-select formControlName="category">
+          <mat-option *ngFor="let c of categories" [value]="c">{{c}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status">
+          <mat-option *ngFor="let s of statuses" [value]="s">{{s}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Event Date</mat-label>
+      <input matInput formControlName="eventDate" type="datetime-local" />
+      <mat-error *ngIf="form.get('eventDate')?.hasError('futureDate')">Must be a future date for Draft/Scheduled</mat-error>
+    </mat-form-field>
+
+    <div class="row">
+      <mat-form-field>
+        <mat-label>Attendees</mat-label>
+        <input matInput type="number" formControlName="attendees" />
+      </mat-form-field>
+
+      <mat-form-field class="full">
+        <mat-label>Location</mat-label>
+        <input matInput formControlName="location" />
+      </mat-form-field>
+    </div>
+
+    <div class="actions">
+      <button mat-raised-button color="primary" type="submit">Save</button>
+      <button mat-button type="button" routerLink="/">Cancel</button>
+    </div>
+  </form>
+</mat-card>
