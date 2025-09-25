@@ -91,26 +91,26 @@ IF successful not install , the application will open then set this:
 
 # File Structure (Key Files)
 
-src/ app/ 
+# src/ app/ 
       app.component.ts 
      app.component.html 
-  event.service.ts 
-  in-memory-data.service.ts 
-  event.model.ts 
-   styles.css
+  - event.service.ts 
+ -  in-memory-data.service.ts 
+  - event.model.ts 
+  -  styles.css
    
-   app.component.spec.ts
-   app.module.ts
-   app.component.html 
-   event.service.ts 
-   in-memory-data.service.ts 
-   event.model.ts 
-   app.component.spec.ts
-   app.module.ts
-   styles.css 
-   angular.json 
-   package.json
-   db.json
+  -  app.component.spec.ts
+   - app.module.ts
+   - app.component.html 
+  -  event.service.ts 
+  - in-memory-data.service.ts 
+  - event.model.ts 
+  - app.component.spec.ts
+  - app.module.ts
+  - styles.css 
+  - angular.json 
+  - package.json
+   -db.json
   
 
 This README ensures setup instructions, technical approach, and assumptions are clear for evaluators.
