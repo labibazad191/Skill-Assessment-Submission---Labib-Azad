@@ -2,11 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>SEU Events</title>
+  <title>SEU Events - Student Event Management</title>
   <base href="/">
+
+  <!-- Responsive scaling -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO metadata -->
+  <meta name="description" content="SEU Events: Manage student workshops, seminars, socials, and meetings at Southeast University. Built with Angular.">
+  <meta name="author" content="Southeast University">
+
+  <!-- Theme color for mobile browsers -->
+  <meta name="theme-color" content="#1976d2">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Angular Material recommended fonts & icons -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Manifest (optional for PWA) -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
-<body>
-  <app-root>Loading...</app-root>
+<body class="mat-typography">
+  <app-root>
+    <!-- Fallback loading screen -->
+    <style>
+      body { margin: 0; font-family: Roboto, Arial, sans-serif; background: #f5f5f5; }
+      .loading {
+        display: flex; align-items: center; justify-content: center;
+        height: 100vh; font-size: 20px; color: #555;
+      }
+    </style>
+    <div class="loading">Loading SEU Events...</div>
+  </app-root>
 </body>
 </html>
