@@ -92,25 +92,38 @@ IF successful not install , the application will open then set this:
 # File Structure (Key Files)
 
 # src/ app/ 
-      app.component.ts 
-     app.component.html 
-  - event.service.ts 
- -  in-memory-data.service.ts 
-  - event.model.ts 
-  -  styles.css
-   
-  -  app.component.spec.ts
-   - app.module.ts
-   - app.component.html 
-  -  event.service.ts 
-  - in-memory-data.service.ts 
-  - event.model.ts 
-  - app.component.spec.ts
-  - app.module.ts
-  - styles.css 
-  - angular.json 
-  - package.json
-   -db.json
+
+
+app.component.ts / app.component.html
+Root Angular component with routing outlet and UI shell.
+
+app.module.ts
+Declares modules, components, and imports HttpClientModule + InMemoryWebApiModule.
+
+event.model.ts
+Defines the Event interface with fields: id, title, description, category, status, date, attendees, etc.
+
+event.service.ts
+Handles all event CRUD operations using Angular HttpClient.
+
+in-memory-data.service.ts
+Simulates a REST backend with pre-loaded demo events from db.json.
+
+styles.css
+Global styles for the application.
+
+app.component.spec.ts
+Unit test for AppComponent.
+
+angular.json
+Angular CLI configuration.
+
+package.json
+Lists dependencies and project scripts.
+
+db.json
+Mock event data used by in-memory API.
+     
   
 
 This README ensures setup instructions, technical approach, and assumptions are clear for evaluators.
