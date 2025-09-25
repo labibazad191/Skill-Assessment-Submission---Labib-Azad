@@ -1,0 +1,17 @@
+<div>
+<input [formControl]="search" placeholder="Search by title or category" />
+</div>
+
+
+<cdk-virtual-scroll-viewport itemSize="80" style="height: 400px; width:100%;">
+<div *cdkVirtualFor="let ev of filtered">
+<h4>{{ev.title}}</h4>
+<div>{{ev.category}} • {{ev.status}} • {{ev.eventDate}}</div>
+<p>{{ev.description}}</p>
+<small>{{ev.attendees}} attendees — {{ev.location}}</small>
+<div>
+<button (click)="delete(ev.id)">Delete</button>
+</div>
+<hr />
+</div>
+</cdk-virtual-scroll-viewport>
