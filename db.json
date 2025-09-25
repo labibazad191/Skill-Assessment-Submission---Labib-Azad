@@ -1,0 +1,26 @@
+{
+  "event": [
+    {
+      "id": 1,
+      "title":"Angular Workshop",
+      "description":"A hands-on workshop to learn Angular basics",
+      "category":"Workshop",
+      "status":"upcoming",
+      "eventDate":"2025-10-15",
+      "createAt":"2025-09-25",
+      "attendees":300,
+      "location":"Southeast University, Dhaka, Bangladesh"
+    },
+  {
+      "id": 1,
+      "title":"Angular Workshop",
+      "description":"A hands-on workshop to learn Angular basics",
+      "category":"Workshop",
+      "status":"upcoming",
+      "eventDate":"2025-10-15",
+      "createAt":"2025-09-25",
+      "attendees":300,
+      "location":"Southeast University, Dhaka,Bangladesh"
+    }
+  ]
+}
